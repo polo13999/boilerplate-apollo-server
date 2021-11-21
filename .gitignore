@@ -1,0 +1,9 @@
+/app/node_modules/
+/app/.next/
+/app/static/files
+/server/node_modules/
+/server/static/uploads
+/server/dist
+/node_modules/
+.env
+ 

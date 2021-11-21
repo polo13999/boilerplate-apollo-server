@@ -1,0 +1,33 @@
+type User {
+    id: Int
+    account:String,
+    name:String,
+     password:String,
+  
+}
+ 
+type Query{
+    meQuery:User
+    userQuery(page:Int,size:Int,     account:String,name:String):[User]}
+
+type Mutation{
+
+ userUpdate(id:Int,  account:String,name:String,userCode:String   ):User
+ userCreate(id:Int,
+  account:String,name:String,userCode:String   ):User
+ userSelfSetup(userCode:String ,password:String ):User
+ 
+ userLogin(userCode:String!,password:String):User
+ userUpdateInfo:[User]
+ userLogout:Authpayload   
+#  changeEmpLogin(empno:String):User  
+}
+
+
+ 
+
+type Authpayload {  
+   token: String
+}
+
+ 
